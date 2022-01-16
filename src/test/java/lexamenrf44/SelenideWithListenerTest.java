@@ -15,13 +15,13 @@ public class SelenideWithListenerTest {
     public void issueSearchTest() {
         open("https://github.com");
 
-        $("header-search-input").click();
-        $("header-search-input").sendKeys("eroshenkoam/allure-example");
-        $("header-search-input").submit();
+        $(".header-search-input").click();
+        $(".header-search-input").sendKeys("eroshenkoam/allure-example");
+        $(".header-search-input").submit();
 
         $(linkText("eroshenkoam/allure-example")).click();
-        $(partialLinkText("issues")).click();
-        $(withText("68")).should(Condition.visible);
+        $(partialLinkText("Issues")).click();
+        $(withText("#68")).should(Condition.visible);
 
     }
 
